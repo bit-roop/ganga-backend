@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile, status
 from sqlalchemy.orm import Session
 
-from backend.app.db.session import get_db
-from backend.app.schemas.incident import (
+from app.db.session import get_db
+from app.schemas.incident import (
     IncidentActionRequest,
     IncidentActionResponse,
     IncidentCategoryDefinition,
@@ -10,7 +10,7 @@ from backend.app.schemas.incident import (
     IncidentUploadResponse,
     IncidentRead,
 )
-from backend.app.services.incident_service import (
+from app.services.incident_service import (
     CATEGORY_DEFINITIONS,
     create_incident,
     get_incident_by_id,

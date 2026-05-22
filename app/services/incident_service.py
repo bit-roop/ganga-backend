@@ -7,9 +7,9 @@ from fastapi import HTTPException, UploadFile, status
 from sqlalchemy import desc, select
 from sqlalchemy.orm import Session
 
-from backend.app.models.incident import Incident
-from backend.app.core.config import settings
-from backend.app.schemas.incident import (
+from app.models.incident import Incident
+from app.core.config import settings
+from app.schemas.incident import (
     AnalystAction,
     IncidentCategoryDefinition,
     IncidentCreate,
@@ -219,7 +219,7 @@ def update_incident_status(db: Session, incident: Incident, action: AnalystActio
 
 
 def seed_incidents_if_empty() -> None:
-    from backend.app.db.session import SessionLocal
+    from app.db.session import SessionLocal
 
     _ensure_media_directory()
 

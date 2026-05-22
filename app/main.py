@@ -6,11 +6,11 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from backend.app.api.routes.incidents import router as incidents_router
-from backend.app.core.config import settings
-from backend.app.db.base import Base
-from backend.app.db.session import engine
-from backend.app.services.incident_service import seed_incidents_if_empty
+from app.api.routes.incidents import router as incidents_router
+from app.core.config import settings
+from app.db.base import Base
+from app.db.session import engine
+from app.services.incident_service import seed_incidents_if_empty
 
 
 @asynccontextmanager
